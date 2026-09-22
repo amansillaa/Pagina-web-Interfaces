@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Creativo | Moderno</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardDark: '#131c31',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300" id="body">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-pink-500 bg-clip-text text-transparent">
+                Alex.dev
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-indigo-400 transition-colors">Inicio</a>
+                <a href="#proyectos" class="hover:text-indigo-400 transition-colors">Trabajos</a>
+                <a href="#sobre-mi" class="hover:text-indigo-400 transition-colors">Sobre mí</a>
+                <a href="#contacto" class="hover:text-indigo-400 transition-colors">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="p-2.5 rounded-full glass-card text-slate-300 hover:text-indigo-400 transition-colors" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-full transition-all shadow-lg shadow-indigo-600/20">
+                    Hablemos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative px-6 pt-20 overflow-hidden">
+        <!-- Background decorative glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs md:text-sm text-indigo-400 mb-6 border border-indigo-500/20">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                Disponible para nuevos proyectos
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Diseño digital <br/>
+                <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">que deja huella.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Soy desarrollador y diseñador frontend enfocado en crear experiencias web modernas, interactivas y estéticamente impecables.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#proyectos" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-2">
+                    Ver mis trabajos <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 text-base font-semibold glass-card hover:bg-white/5 rounded-xl transition-all border border-white/10 flex items-center justify-center">
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-28 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Portafolio</h2>
+                    <p class="text-3xl sm:text-4xl font-bold tracking-tight">Trabajos destacados</p>
+                </div>
+                <p class="text-slate-400 mt-4 md:mt-0 max-w-md text-sm sm:text-base">
+                    Una selección de mis proyectos más recientes enfocados en rendimiento, diseño minimalista y experiencia de usuario.
+                </p>
+            </div>
+
+            <!-- Projects Grid (3 works) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <article class="glass-card rounded-2xl overflow-hidden group glow-effect transition-all duration-300 flex flex-col">
+                    <div class="relative overflow-hidden aspect-video bg-slate-800">
+                        <img src="https://placehold.co/800x500/1e293b/818cf8?text=Nexus+App" alt="Nexus Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/1e293b/ffffff?text=Proyecto+1'">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 text-xs font-semibold bg-indigo-500/80 text-white backdrop-blur-md rounded-full">SaaS / Web App</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Nexus Analytics Dashboard</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Plataforma de visualización de datos en tiempo real con diseño futurista, soporte para modo oscuro y métricas financieras avanzadas.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                            <div class="flex gap-2 text-xs text-indigo-300 font-medium">
+                                <span class="px-2.5 py-1 rounded-md bg-indigo-500/10">React</span>
+                                <span class="px-2.5 py-1 rounded-md bg-indigo-500/10">Tailwind</span>
+                                <span class="px-2.5 py-1 rounded-md bg-indigo-500/10">Chart.js</span>
+                            </div>
+                            <button onclick="openProjectModal('Nexus Analytics', 'Plataforma completa de análisis de datos para empresas fintech, construida con React y Tailwind CSS para ofrecer una respuesta rápida y fluida.')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-indigo-600 transition-all">
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="glass-card rounded-2xl overflow-hidden group glow-effect transition-all duration-300 flex flex-col">
+                    <div class="relative overflow-hidden aspect-video bg-slate-800">
+                        <img src="https://placehold.co/800x500/1e293b/ec4899?text=Lumina+Store" alt="Lumina E-commerce" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/1e293b/ffffff?text=Proyecto+2'">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 text-xs font-semibold bg-pink-500/80 text-white backdrop-blur-md rounded-full">E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Lumina Minimalist Store</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Tienda online de alta gama orientada a la moda sostenible. Destaca por microinteracciones fluidas y un proceso de pago optimizado.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                            <div class="flex gap-2 text-xs text-pink-300 font-medium">
+                                <span class="px-2.5 py-1 rounded-md bg-pink-500/10">Next.js</span>
+                                <span class="px-2.5 py-1 rounded-md bg-pink-500/10">Stripe</span>
+                                <span class="px-2.5 py-1 rounded-md bg-pink-500/10">Node</span>
+                            </div>
+                            <button onclick="openProjectModal('Lumina Minimalist Store', 'Experiencia de comercio electrónico de lujo diseñada para maximizar la conversión con tiempos de carga mínimos y animaciones inmersivas.')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-pink-600 transition-all">
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="glass-card rounded-2xl overflow-hidden group glow-effect transition-all duration-300 flex flex-col">
+                    <div class="relative overflow-hidden aspect-video bg-slate-800">
+                        <img src="https://placehold.co/800x500/1e293b/10b981?text=Aether+OS" alt="Aether OS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/1e293b/ffffff?text=Proyecto+3'">
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 text-xs font-semibold bg-emerald-500/80 text-white backdrop-blur-md rounded-full">Web Tool / UI</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">Aether Creative Suite</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Herramienta de diseño basada en navegador para creadores de contenido. Incluye generación de paletas y exportación de componentes CSS.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                            <div class="flex gap-2 text-xs text-emerald-300 font-medium">
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10">Vue.js</span>
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10">Tailwind</span>
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/10">Canvas</span>
+                            </div>
+                            <button onclick="openProjectModal('Aether Creative Suite', 'Suite de herramientas web interactivas para creadores digitales, con un enfoque profundo en el rendimiento y la facilidad de uso.')" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-white hover:bg-emerald-600 transition-all">
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="py-20 px-6 relative border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">Conóceme</h2>
+            <p class="text-3xl font-bold tracking-tight mb-6">Pasión por el código limpio y el diseño UI/UX</p>
+            <p class="text-slate-400 leading-relaxed mb-8">
+                Combino ingeniería de software con principios de diseño moderno para construir productos digitales que destacan. Cada línea de código está pensada para ofrecer velocidad, accesibilidad y una estética impecable.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 rounded-xl glass-card text-sm font-medium text-slate-300">JavaScript / TypeScript</span>
+                <span class="px-4 py-2 rounded-xl glass-card text-sm font-medium text-slate-300">React & Next.js</span>
+                <span class="px-4 py-2 rounded-xl glass-card text-sm font-medium text-slate-300">Tailwind CSS</span>
+                <span class="px-4 py-2 rounded-xl glass-card text-sm font-medium text-slate-300">UI/UX Design</span>
+                <span class="px-4 py-2 rounded-xl glass-card text-sm font-medium text-slate-300">Performance</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-24 px-6 relative border-t border-white/10 bg-black/20">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">¿Tienes un proyecto en mente?</h2>
+            <p class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Trabajemos juntos</p>
+            <p class="text-slate-400 mb-10">
+                Estoy abierto a nuevas oportunidades, colaboraciones o simplemente para saludar. ¡Escríbeme!
+            </p>
+            
+            <a href="mailto:hola@tudominio.com" class="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-2xl transition-all shadow-xl shadow-indigo-600/25 mb-16">
+                <i class="fa-regular fa-envelope"></i> hola@tudominio.com
+            </a>
+
+            <div class="flex justify-center space-x-6 mb-12 text-slate-400">
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:text-indigo-400 hover:scale-110 transition-all">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:text-indigo-400 hover:scale-110 transition-all">
+                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:text-indigo-400 hover:scale-110 transition-all">
+                    <i class="fa-brands fa-twitter text-lg"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:text-indigo-400 hover:scale-110 transition-all">
+                    <i class="fa-brands fa-dribbble text-lg"></i>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500">
+                © 2026 Alex.dev. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-card max-w-lg w-full p-8 rounded-2xl relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4">Título del Proyecto</h3>
+            <p id="modalDesc" class="text-slate-300 leading-relaxed mb-6">Descripción detallada del proyecto seleccionado.</p>
+            <div class="flex justify-end">
+                <button onclick="closeProjectModal()" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition-colors">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.getElementById('body');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light');
+            if (body.classList.contains('light')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                body.classList.remove('bg-darkBg', 'text-slate-100');
+                body.classList.add('bg-slate-50', 'text-slate-900');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                body.classList.remove('bg-slate-50', 'text-slate-900');
+                body.classList.add('bg-darkBg', 'text-slate-100');
+            }
+        });
+
+        // Modal Functions
+        const projectModal = document.getElementById('projectModal');
+        const modalContent = document.getElementById('modalContent');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+
+        function openProjectModal(title, description) {
+            modalTitle.textContent = title;
+            modalDesc.textContent = description;
+            projectModal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        }
+
+        function closeProjectModal() {
+            projectModal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+        }
+
+        // Close modal when clicking outside
+        projectModal.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                closeProjectModal();
+            }
+        });
+
+        // Navbar blur on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
